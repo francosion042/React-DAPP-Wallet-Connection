@@ -71,10 +71,12 @@ function App() {
       <header className="App-header">
         {
           account && (
-            <>
+            <div>
               <h1> Connected </h1>
-              <h3>Connected Account: <br /> <span style={{color: 'red'}}>{account}</span></h3>
-            </>
+              <h3>Connected Account: <br /><a style={{color: 'red'}} href={`https://etherscan.io/address/${account}`} target="blank">{account.substring(0, 6)}....{account.substring(account.length - 4)}</a></h3>
+              <h5></h5>
+              <small>click account to view on etherscan</small>
+            </div>
           )
         }
         {
